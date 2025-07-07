@@ -909,7 +909,7 @@ body.block-scroll {
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center;    /* Центрирование по вертикали */
     width: 100%;
-    margin: 0px 15px 0px;
+    margin: 0px 0px;
     padding: 0 15px;       /* Добавляем отступы по бокам */
     box-sizing: border-box;
 }
