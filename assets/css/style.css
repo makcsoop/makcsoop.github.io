@@ -534,7 +534,7 @@ body.block-scroll {
 /* Intro Slider*/
 
 #main1{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/main.jpg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/main.jpg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
@@ -543,14 +543,14 @@ body.block-scroll {
 }
 
 #main2{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets//images/main2.jpg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/main2.jpg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
 }
 
 #main3{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets//images/main3.jpeg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/main3.jpeg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
@@ -929,9 +929,29 @@ body.block-scroll {
     font-size: 18px;
     text-align: center;
     min-width: 300px;      /* Добавим минимальную ширину */
-    white-space: nowrap;   /* Запрещаем перенос текста */
+    white-space: nowrap;   /* Запрещаем перенос текста */   
+}
+@media (max-width: 768px) {
+  .btn_main {
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 300px; /* Максимальная ширина */
+    padding: 12px 20px; /* Уменьшенные отступы */
+    font-size: 16px; /* Уменьшенный размер текста */
+    min-width: unset; /* Сбрасываем минимальную ширину */
+  }
+  
+  .button_container {
+    padding: 0 15px; /* Добавляем отступы по бокам */
+  }
 }
 
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .btn_main {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+}
 .btn_main:hover {
     box-shadow: 0 0 0 2px white, 0 0 0 4px #3C82F8;
     background: #3C82F8;
@@ -2234,7 +2254,7 @@ button[type="submit"]:hover {
         top: 100%;
         left: 0;
 
-        background-color: #eb8b8d;
+        background-color: #353131;
     }
 
     .nav.active {
