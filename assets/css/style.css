@@ -534,7 +534,7 @@ body.block-scroll {
 /* Intro Slider*/
 
 #main1{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets//images/main.jpg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/main.jpg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
