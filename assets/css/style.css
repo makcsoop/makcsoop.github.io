@@ -534,7 +534,7 @@ body.block-scroll {
 /* Intro Slider*/
 
 #main1{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/main.jpg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/main.jpg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
@@ -543,14 +543,14 @@ body.block-scroll {
 }
 
 #main2{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/main2.jpg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/main2.jpg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
 }
 
 #main3{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/main3.jpeg") center no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/main3.jpeg") center no-repeat; 
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
