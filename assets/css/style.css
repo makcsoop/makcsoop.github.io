@@ -629,7 +629,7 @@ body.block-scroll {
 .navigation {
     position: absolute;
     bottom: 50px;
-    margin-left: 40px; /* Растягиваем на всю ширину */
+/*     margin-left: 40px; Растягиваем на всю ширину  */
     width: 100%; /* Занимаем всю доступную ширину */
     transform: none; /* Убираем transform, так как больше не нужно центрировать */
     display: flex;
