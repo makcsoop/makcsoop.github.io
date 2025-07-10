@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
             slides[0].style.visibility = "hidden";
             slides[0].style.transform = "translateX(0%)"
             slides[0].style.visibility = "visible";
-
+            console.log("index 0") // 1 - 2
         }
         else if(index == 1){
             slides[2].style.visibility = "hidden";
@@ -205,12 +205,36 @@ document.addEventListener('DOMContentLoaded', function() {
             slides[2].style.transform = "translateX(100%)"
             slides[2].style.visibility = "visible";
 
-           
+            console.log("index 1") // 2 - 3
         }else if(index == 2){
             slides[1].style.transform = "translateX(-100%)"
             slides[2].style.transform = "translateX(0%)"
+            console.log("index 2") // 3 - 1
+        }
+    }
 
-   
+    function truepos(n){
+        if(n == 0){
+            slides[1].style.visibility = "hidden";
+            slides[2].style.visibility = "hidden";
+            slides[1].style.transform = "translateX(100%)"
+            slides[2].style.transform = "translateX(100%)"
+            slides[1].style.visibility = "visible";
+            slides[2].style.visibility = "visible";
+        }else if(n == 1){
+            slides[0].style.visibility = "hidden";
+            slides[2].style.visibility = "hidden";
+            slides[0].style.transform = "translateX(-100%)"
+            slides[2].style.transform = "translateX(100%)"
+            slides[0].style.visibility = "visible";
+            slides[2].style.visibility = "visible";
+        }else{
+            slides[0].style.visibility = "hidden";
+            slides[1].style.visibility = "hidden";
+            slides[0].style.transform = "translateX(-100%)"
+            slides[1].style.transform = "translateX(-100%)"
+            slides[0].style.visibility = "visible";
+            slides[1].style.visibility = "visible";
         }
     }
     
@@ -260,19 +284,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для перехода к конкретному слайду
     function goToSlide(n) {
         if(n === currentSlide) return;
+        if (n != 1 && currentSlide != 1){
+            slides[1].style.visibility = "hidden";
+            slides[1].style.zIndex = '0';
+        }
         
         // Определяем направление анимации
         const direction = n > currentSlide ? 1 : -1;
         
+         // Анимируем текущий слайд
+         slides[currentSlide].style.transform = direction === 1 ? 'translateX(-100%)' : 'translateX(100%)';
+        
         // Подготавливаем новый слайд
         slides[n].style.transform = direction === 1 ? 'translateX(100%)' : 'translateX(-100%)';
         
-        // Анимируем текущий слайд
-        slides[currentSlide].style.transform = direction === 1 ? 'translateX(-100%)' : 'translateX(100%)';
-        
+       
         // Анимируем новый слайд
         setTimeout(() => {
+            
+
             slides[n].style.transform = 'translateX(0)';
+
             
             // Обновляем классы активных элементов
             slides[currentSlide].classList.remove('active');
@@ -282,12 +314,14 @@ document.addEventListener('DOMContentLoaded', function() {
             navItems[n].classList.add('active');
             
             currentSlide = n;
+            truepos(n);
+            slides[1].style.visibility = "visible"
         }, 50);
     }
     
     // Запускаем автоматическое переключение
     function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 5000);
+        slideInterval = setInterval(nextSlide, 2000);
     }
     
     // Останавливаем автоматическое переключение
