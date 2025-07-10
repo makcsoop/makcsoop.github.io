@@ -16,13 +16,10 @@ $(function() {
     });
 
     function checkScroll(scrollOffset) {
-        console.log(scrollOffset, introH);
         if(scrollOffset >= introH ) {
             header.addClass("fixed");
-            console.log("add_header")
         } else {
             header.removeClass("fixed");
-            console.log("delete_header")
         }
     }
 
@@ -188,13 +185,32 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
     let slideInterval;
 
-    function defultPos(){
-        for (let i = 0; i < slides.length; i++){
-            if (i === 0){
-                slides[i].style.transform = 'translateX(0%)';
-            }else{
+    function defultPos(index){
+        if(index == 0){
+            slides[1].style.visibility = "hidden";
+            slides[2].style.visibility = "hidden";
+            for (let i = 1; i < slides.length; i++){
                 slides[i].style.transform = 'translateX(100%)';
+                slides[i].style.visibility = "visible";
             }
+            slides[0].style.visibility = "hidden";
+            slides[0].style.transform = "translateX(0%)"
+            slides[0].style.visibility = "visible";
+
+        }
+        else if(index == 1){
+            slides[2].style.visibility = "hidden";
+            slides[0].style.transform = "translateX(-100%)"
+            slides[1].style.transform = "translateX(0%)"
+            slides[2].style.transform = "translateX(100%)"
+            slides[2].style.visibility = "visible";
+
+           
+        }else if(index == 2){
+            slides[1].style.transform = "translateX(-100%)"
+            slides[2].style.transform = "translateX(0%)"
+
+   
         }
     }
     
@@ -218,20 +234,26 @@ document.addEventListener('DOMContentLoaded', function() {
         slides[currentSlide].classList.add('exit');
         
         // Анимируем новый слайд в центр
-        defultPos();
-        setTimeout(() => {
-            slides[nextSlideIndex].style.transform = 'translateX(0%)';
-            slides[currentSlide].style.transform = 'translateX(-100%)';
+        
+        // setTimeout(() => {
+        //     slides[nextSlideIndex].style.transform = 'translateX(0%)';
+        //     slides[currentSlide].style.transform = 'translateX(-100%)';
             
-            // Обновляем классы активных элементов
-            slides[currentSlide].classList.remove('active');
-            slides[nextSlideIndex].classList.add('active');
+        //     // Обновляем классы активных элементов
+        // slides[currentSlide].classList.remove('active');
+        // slides[nextSlideIndex].classList.add('active');
             
-            navItems[currentSlide].classList.remove('active');
-            navItems[nextSlideIndex].classList.add('active');
+        //     navItems[currentSlide].classList.remove('active');
+        //     navItems[nextSlideIndex].classList.add('active');
+        navItems[currentSlide].classList.remove('active');
+        navItems[nextSlideIndex].classList.add('active');
             
-            currentSlide = nextSlideIndex;
-        }, 50);
+        currentSlide = nextSlideIndex;
+        // }, 50);
+        
+        if (currentSlide === 0) {defultPos(0); }
+        if (currentSlide === 1) {defultPos(1); }
+        if (currentSlide === 2) {defultPos(2); }
         
     }
     
