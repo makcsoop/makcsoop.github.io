@@ -301,8 +301,6 @@ document.addEventListener('DOMContentLoaded', function() {
        
         // Анимируем новый слайд
         setTimeout(() => {
-            
-
             slides[n].style.transform = 'translateX(0)';
 
             
@@ -315,8 +313,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             currentSlide = n;
             truepos(n);
-            slides[1].style.visibility = "visible"
-        }, 50);
+            
+        }, 0);
+        slides[1].style.visibility = "visible"
     }
     
     // Запускаем автоматическое переключение
