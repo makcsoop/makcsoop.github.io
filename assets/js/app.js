@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Запускаем автоматическое переключение
     function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 2000);
+        slideInterval = setInterval(nextSlide, 5000);
     }
     
     // Останавливаем автоматическое переключение
