@@ -1180,7 +1180,7 @@ body.block-scroll {
 .card__inner {
     position: relative;
 }
-
+/* 
 .card__inner:hover .card__img {
 }
 
@@ -1192,7 +1192,7 @@ body.block-scroll {
 
 .card__img {
 
-}
+} */
 
 .card__img img {
     display: block;
@@ -2521,4 +2521,3 @@ button[type="submit"]:hover {
     }
 
 }
- 
