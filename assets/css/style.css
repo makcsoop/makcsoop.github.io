@@ -594,7 +594,7 @@ body.block-scroll {
 }
 
 .slide.exit {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     
 }
 
@@ -629,7 +629,7 @@ body.block-scroll {
 .navigation {
     position: absolute;
     bottom: 50px;
-/*     margin-left: 40px; Растягиваем на всю ширину  */
+     /* Растягиваем на всю ширину */
     width: 100%; /* Занимаем всю доступную ширину */
     transform: none; /* Убираем transform, так как больше не нужно центрировать */
     display: flex;
@@ -1046,7 +1046,7 @@ body.block-scroll {
     width: 70px;
     height: 3px;
 
-    background-color: #f38181;
+    background-color: #2a5ca7;
 
     position: absolute;
     top: -3px;
@@ -1115,7 +1115,7 @@ body.block-scroll {
     height: 3px;
     margin: 30px auto;
 
-    background-color: #f38181;
+    background-color: #2a5ca7;
 }
 
 .section__text {
@@ -1179,32 +1179,25 @@ body.block-scroll {
 
 .card__inner {
     position: relative;
-    background-color: #a9a9a9;
 }
 
 .card__inner:hover .card__img {
-    transform: translate3d(-10px, -10px, 0);
 }
 
 .card__inner:hover .card__img img {
-    opacity: .1;
 }
 
 .card__inner:hover .card__text {
-    opacity: 1;
 }
 
 .card__img {
-    background: linear-gradient(to bottom, #f38181, #fce38a);
 
-    transition: transform .2s linear;
 }
 
 .card__img img {
     display: block;
     max-width: 100%;
     height: auto;
-    transition: opacity .1s linear;
 }
 
 .card__text {
@@ -1230,7 +1223,7 @@ body.block-scroll {
     margin-top: 20px;
 
     text-align: center;
-}
+}   
 
 .card__name {
     margin-bottom: 5px;
@@ -1482,7 +1475,7 @@ body.block-scroll {
     height: 3px;
     margin-right: 10px;
 
-    background-color: #f38181;
+    background-color: #2a5ca7;
 }
 .reviews__suptitle {
     font-size: 30px;
@@ -1503,7 +1496,7 @@ body.block-scroll {
     height: 3px;
     margin: 30px auto;
 
-    background-color: #f38181;
+    background-color: #2a5ca7;
 }
 
 .slick-arrow {
@@ -1593,7 +1586,7 @@ body.block-scroll {
 .works__item {
     position: relative;
 
-    background: linear-gradient(to bottom, #f38181, #fce38a);
+    background: linear-gradient(to bottom, #458fff, #cbe7f6);
 }
 
 .works__item:hover .works__image {
@@ -1697,7 +1690,7 @@ body.block-scroll {
     height: 3px;
     margin: 15px 0;
 
-    background-color: #f38181;
+    background-color: #2a5ca7;
 }
 
 
@@ -1710,7 +1703,7 @@ body.block-scroll {
 
 .map__title {
     font-size: 24px;
-    color: #f38181;
+    color: #2a5ca7;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -1722,7 +1715,7 @@ body.block-scroll {
     height: 3px;
     margin: 15px auto 0;
 
-    background-color: #f38181;
+    background-color: #2a5ca7;
 }
 
 .map__title a {
@@ -1958,7 +1951,7 @@ body.block-scroll {
 }
 
 .copyright span {
-    color: #f38181;
+    color: #2a5ca7;
 }
 
 /*Форма*/
